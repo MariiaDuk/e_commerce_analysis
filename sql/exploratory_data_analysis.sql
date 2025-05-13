@@ -46,6 +46,22 @@ SELECT COUNTIF(TransactionNo IS NULL)
 FROM sales;
 
 
+-- Перевіряємо, чи є в таблиці дублікати (так, бачимо 4794 рядки, кожен з яких є в таблиці більше, ніж 1 раз)
+
+SELECT *, COUNT(*) AS cnt_rows
+FROM sales
+GROUP BY TransactionNo, TransactionDate, ProductNo, ProductName, Price, Quantity, CustomerNo, Country
+HAVING COUNT(*) > 1;
+
+
+-- Ми будемо видаляти дублікати та зберігати результат як нову таблицю, з якою далі будемо працювати в табло. Щоб потім впевнитися, що цей етап пройшов нормально, порахуємо кількість унікальних рядків (526356) та додамо кількість рядків, які дублюються 526356+4794=531150. Тобто у новій таблиці ми маємо отримати 531150 рядків
+
+SELECT *, COUNT(*) AS cnt_rows
+FROM sales
+GROUP BY TransactionNo, TransactionDate, ProductNo, ProductName, Price, Quantity, CustomerNo, Country
+HAVING COUNT(*) = 1;
+
+
 -- В описі датасета сказано, що у рядків з поверненнями TransactionNo починається з 'С', а Quantity має відʼємне значення. Перевіримо, чи є рядки, де кількість товару відʼємна, а номер транзакції не починається з 'С' (ні)
 
 SELECT *
@@ -65,19 +81,3 @@ WHERE Quantity > 0 AND LEFT(TransactionNo, 1) = 'C';
 SELECT *
 FROM sales
 WHERE Quantity = 0 OR Price = 0;
-
-
--- Перевіряємо, чи є в таблиці дублікати (так, бачимо 4794 рядки, кожен з яких є в таблиці більше, ніж 1 раз)
-
-SELECT *, COUNT(*) AS cnt_rows
-FROM sales
-GROUP BY TransactionNo, TransactionDate, ProductNo, ProductName, Price, Quantity, CustomerNo, Country
-HAVING COUNT(*) > 1;
-
-
--- Ми будемо видаляти дублікати та зберігати результат як нову таблицю, з якою далі будемо працювати в табло. Щоб потім впевнитися, що цей етап пройшов нормально, порахуємо кількість унікальних рядків (526356) та додамо кількість рядків, які дублюються 526356+4794=531150. Тобто у новій таблиці ми маємо отримати 531150 рядків
-
-SELECT *, COUNT(*) AS cnt_rows
-FROM sales
-GROUP BY TransactionNo, TransactionDate, ProductNo, ProductName, Price, Quantity, CustomerNo, Country
-HAVING COUNT(*) = 1;
