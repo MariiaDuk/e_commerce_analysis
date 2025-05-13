@@ -9,7 +9,10 @@ SELECT TransactionNo
   , Quantity
   , CustomerNo
   , Country
-FROM `my-pet-project-458715.Sales_Transaction.sales_transaction_original`;-- Дивимось, що є в таблиці та як це виглядає
+FROM `my-pet-project-458715.Sales_Transaction.sales_transaction_original`;
+
+
+-- Дивимось, що є в таблиці та як це виглядає
 
 SELECT *
 FROM sales
