@@ -1,11 +1,4 @@
--- Дивимось, що є в таблиці та як це виглядає
-
-SELECT *
-FROM sales
-LIMIT 1000;
-
-
--- Перейменовуємо стовпчик Date на TransactionDate, тому що Date — це зарезервоване слово, це може спричинити помилки
+-- Перейменовуємо стовпчик Date на TransactionDate
 
 CREATE OR REPLACE TABLE `my-pet-project-458715.Sales_Transaction.sales_transaction_original` AS
 SELECT TransactionNo
@@ -16,7 +9,11 @@ SELECT TransactionNo
   , Quantity
   , CustomerNo
   , Country
-FROM `my-pet-project-458715.Sales_Transaction.sales_transaction_original`;
+FROM `my-pet-project-458715.Sales_Transaction.sales_transaction_original`;-- Дивимось, що є в таблиці та як це виглядає
+
+SELECT *
+FROM sales
+LIMIT 1000;
 
 
 -- Рахуємо загальну кількість рядків (536350) та кількість пустих значень по кожному стовпцю (відсутні)
