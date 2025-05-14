@@ -2,7 +2,8 @@
 
 SELECT ROUND(AVG(QuantityInOrder)) AS AvgQuantityInOrder
 FROM (
-  SELECT TransactionNo, SUM(Quantity) AS QuantityInOrder
+  SELECT TransactionNo
+    , SUM(Quantity) AS QuantityInOrder
   FROM `my-pet-project-458715.Sales_Transaction.sales_transaction_cleaned`
   WHERE CustomerNo IN ( 
     SELECT CustomerNo
