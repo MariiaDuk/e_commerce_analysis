@@ -21,4 +21,5 @@ FROM (
 
 SELECT *
 FROM sales_clean
-WHERE CustomerNo = '16446' OR CustomerNo = '12346';
+WHERE CustomerNo = '16446' OR CustomerNo = '12346'
+ORDER BY CustomerNo, TransactionNo;
