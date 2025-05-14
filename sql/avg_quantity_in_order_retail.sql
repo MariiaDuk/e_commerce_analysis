@@ -7,7 +7,7 @@ FROM (
   WHERE CustomerNo IN ( 
     SELECT CustomerNo
     FROM `my-pet-project-458715.Sales_Transaction.sales_transaction_cleaned`
-    WHERE Quantity<=10
+    WHERE Quantity <= 10
     GROUP BY CustomerNo
   )
   GROUP BY TransactionNo
