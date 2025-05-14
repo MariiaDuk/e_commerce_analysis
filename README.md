@@ -1,17 +1,17 @@
 # E-Commerce Analysis (Pet Project)
 
-Hello! This is my first pet-project, so I'd be glad for your attention and feedback. And for a job-offer of course, cuz I’m looking for a job :)
+Hello! Welcome to my first data analysis pet project. I'd be glad for your attention and feedback.
 
 Goal of this project is to find growth opportunities for an online retail store. This includes finding problem points, points for potential growth and optimization of work.
 
-I used SQL (BigQuery) and Tableau for analysis. In this pet project, I got by with simple queries, but I can write more complex queries with JOINS, UNIONS, window functions, common table expressions, subqueries etc.
+I used SQL (BigQuery) and Tableau for analysis. For this pet project, I utilized fundamental SQL queries. However, I possess the skills to write more complex queries involving JOINS, UNIONS, window functions, common table expressions, subqueries, etc.
 
 ### Data Source
 
 Data Source: [Kaggle](https://www.kaggle.com/datasets/gabrielramos87/an-online-shop-business/data)
 Files: [sales.csv](https://github.com/MariiaDuk/e_commerce_analysis/blob/main/data/sales.csv)
 
-> **Description from original dataset**
+> * **Description from original dataset**
 > 
 > This is a sales transaction data set of UK-based e-commerce (online retail) for one year. This London-based shop has been selling gifts and homewares for adults and children through the website since 2007. Their customers come from all over the world and usually make direct purchases for themselves. There are also small businesses that buy in bulk and sell to other customers through retail outlet channels.
 > 
@@ -53,7 +53,7 @@ Then I renamed the Date column to TransactionDate, because Date is a reserved wo
 
 The next step was to check if the table had nulls, empty values, or duplicates. There were no nulls or empty values, but there were duplicates — 4 794 rows were repeated more than once in the table.
 
-In a real project, at this point we would have to contact the business and figure out the reasons for the duplicates. These could be either recorded by mistake, or, for example, products that were purchased in even quantities were somehow split into separate rows. For further work on the project, I assumed these were mistakenly duplicated rows, cleaned the table of them, saved a new table `sales_clean.csv` and continued working with it from step 5.
+In a real project, at this point we would have to contact the business and figure out the reasons for the duplicates. These could be either recorded by mistake, or, for example, products that were purchased in even quantities were somehow split into separate rows. For further work on the project, I assumed these were mistakenly duplicated rows, cleaned the table by removing them, saved a new table `sales_clean.csv` and continued working with it from step 5.
 
 File: [create_table_without_duplicates.sql](https://github.com/MariiaDuk/e_commerce_analysis/blob/main/sql/create_table_without_duplicates.sql)
 
@@ -78,7 +78,7 @@ After exploring the data in SQL, I loaded my new table without duplicates into T
 
 **Step 6 — checking spaces in timeline**
 
-I looked to see if there were any periods in the table for which there was no data. The largest such gap is from December 24 to January 3, but we do not consider this an error, because either our business or its clients could not work on New Year's Day.
+I examined the timeline for any data gaps. The largest such gap is from December 24 to January 3, but we do not consider this an error, because either our business or its clients could not work on New Year's Day.
 
 <img width="1083" alt="Image" src="https://github.com/user-attachments/assets/766cd8fa-364e-4721-9c73-917ef3fbb006" />
 
