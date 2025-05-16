@@ -87,7 +87,7 @@ At this step, I completed the data quality check phase and started building grap
 
 ## Analysis in Tableau
 
-You can find dashboards with the analysis results in [Tableau Public](https://public.tableau.com/views/E-CommerceAnalysisPetProject/E-CommerceAnalysis?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
+### Dashboard: [Tableau Public](https://public.tableau.com/views/E-CommerceAnalysisPetProject/E-CommerceAnalysis?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 All the values ​​I received in Tableau I also checked in SQL.
 
