@@ -2,9 +2,9 @@
 
 Hello! Welcome to my first data analysis pet project. I'd be glad for your attention and feedback.
 
-Goal of this project is to find growth opportunities for an online retail store. This includes finding problem points, points for potential growth and optimization of work.
+Project Goal: To identify key growth opportunities for the online retail store. This includes increasing profitability, improving customer acquisition and retention, and optimizing operational efficiency through data-driven insights.
 
-I used SQL (BigQuery) and Tableau for analysis. For this pet project, I utilized fundamental SQL queries. However, I possess the skills to write more complex queries involving JOINS, UNIONS, window functions, common table expressions, subqueries, etc.
+Technologies Used: SQL (BigQuery) and Tableau. For this pet project, I utilized fundamental SQL queries. However, I possess the skills to write more complex queries involving JOINS, UNIONS, window functions, common table expressions, subqueries, etc.
 
 ## Data Source
 
@@ -181,6 +181,8 @@ In order for a business to develop and generate more profit, it is necessary to 
 
 I see the following plan as the most profitable:
 
-1. Focus on B2B sales.
-2. Allocating resources to promotion in other countries.
-3. Reducing the assortment.
+1. Conduct further research to understand current customer base. If they are wholesale customers, focus on B2B sales. A clear understanding of target customer profile will allow to run more effective marketing campaigns, leading to improved customer engagement and potentially higher revenue per customer.
+2. Use opportunities for growth in international markets, leveraging the existing payment and delivery infrastructure. Successful expansion could significantly increase overall sales and profitability.
+3. Remove or reposition underperforming products and focus on promoting top sellers. This can lead to increased profitability by focusing on popular products and reduced operating costs through better inventory management.
+
+Implementing these and other recommendations mentioned above can lead to significant revenue growth, improved customer engagement, and optimized online store operations.
